@@ -35,9 +35,9 @@
   },
   "homepage": "https://github.com/digitalservicebund/npm-package-example#readme",
   "devDependencies": {
-    "@commitlint/cli": "^17.6.6",
-    "@commitlint/config-conventional": "^17.6.6",
-    "lefthook": "^1.4.4",
-    "semantic-release": "^21.0.7"
+    "@commitlint/cli": "^18.2.0",
+    "@commitlint/config-conventional": "^18.1.0",
+    "lefthook": "^1.5.2",
+    "semantic-release": "^22.0.7"
   }
 }
