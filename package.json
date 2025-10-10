@@ -1,5 +1,5 @@
 {
-  "name": "@digitalservice4germany/npm-package-example",
+  "name": "@digitalservicebund/npm-package-example",
   "version": "0.0.0-development",
   "description": "example package",
   "main": "index.js",
