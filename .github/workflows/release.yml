@@ -28,5 +28,3 @@ jobs:
         run: cd dist && npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # create NPM_TOKEN repository secret (repo settings -> secrets and variables)
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -30,6 +30,8 @@ Make sure to have the following configuration in your `package.json` to enable n
 },
 ```
 
+With trusted publishing, provenance ist automatically included.
+
 ## Mandatory: Commit message linting
 
 Magically simple releasing only works with correct conventional commits. You must always use them! That's why linting is basically mandatory. This example uses `commitlint` with `lefthook` as one possible way.
@@ -39,10 +41,9 @@ Magically simple releasing only works with correct conventional commits. You mus
 In case you just want to cherry pick for your existing package.
 
 * `package.json`: set `"version"` to `"0.0.0-development"` (optional, but recommended)
-* `package.json`: add `"publishConfig": { "provenance": true }` (optional, but recommended)
-* repository settings: add a `NPM_TOKEN` repository secret (repository -> settings -> secrets and variables -> actions -> new repository secret). Find the value in 1Password ("NPM"), look for "Publish Token," its value starts with "npm_"
+* `package.json`: add `"publishConfig": { "public": true }`
 * copy `.github/workflows/release.yml` and adapt to your needs. Make sure to not remove permissions and to keep the configuration of the `setup-node` action.
-* `npm install --save-dev semantic-release`
+* `npm install --save-dev semantic-release@beta`
 
 ### For linting
 
