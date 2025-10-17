@@ -1,6 +1,6 @@
 # npm package example 
 
-Minimal starting point for creating a DigitalService npm package, which you can release with one manual click or (if applicable) triggered automatically by an event. Requires consistent use of conventional commits!
+Template for creating a DigitalService npm package, which you can release with one manual click or (if applicable) triggered automatically by an event. Requires consistent use of conventional commits!
 
 ## Enabler: Conventional commits
 
@@ -22,15 +22,7 @@ The `"version"` field in the `package.json` *in the repository* is never updated
 
 It links packages to their source and build and increases trust in the supply chain. This is only possible when the `npm release` runs on GitHub Actions, not when you release on your local machine.
 
-Make sure to have the following configuration in your `package.json` to enable npm package provenance.
-
-```json
-"publishConfig": {
-    "provenance": true
-},
-```
-
-With trusted publishing, provenance ist automatically included.
+With trusted publishing, provenance is automatically included.
 
 ## Mandatory: Commit message linting
 
@@ -41,9 +33,7 @@ Magically simple releasing only works with correct conventional commits. You mus
 In case you just want to cherry pick for your existing package.
 
 * `package.json`: set `"version"` to `"0.0.0-development"` (optional, but recommended)
-* `package.json`: add `"publishConfig": { "public": true }`
 * copy `.github/workflows/release.yml` and adapt to your needs. Make sure to not remove permissions and to keep the configuration of the `setup-node` action.
-* `npm install --save-dev semantic-release@beta`
 
 ### For linting
 
